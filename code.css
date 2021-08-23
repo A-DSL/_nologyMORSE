@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #ebebeb;
+}
+
+.morse h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.morse p {
+  margin-top: 14px;
+}
+.morse .morse__form {
+  width: 100%;
+}
+.morse .morse__buttons {
+  margin-top: 10px;
+}
+.morse .morse__buttons > * {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.morse .morse__buttons .morsebutton {
+  background-color: #c6c6f0;
+  border: 1px solid #76729e;
+  margin-right: 12px;
+}
+.morse .morse__buttons .englishbutton {
+  background-color: #c1e7c1;
+  border: 1px solid #587e4e;
+}
+.morse .translationoutput {
+  margin-top: 20px;
+  font-size: 24px;
+  min-height: 60px;
+  background-color: #d8d8d8;
+  border: 1px solid grey;
+}
+
+@media screen and (min-width: 440px) {
+  body {
+    margin: 16px;
+  }
+
+  .translationoutput {
+    width: 50%;
+  }
+}

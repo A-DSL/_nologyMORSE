@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Challenge</title>
+    <link rel="stylesheet" href="code.css">
+</head>
+<body>
+
+<main class="morse">
+    <h4>Translate/De-translate your Morse Code here!</h4> 
+    <p>Note that Morse Code translations are not case-sensitive. If de-coding Morse, ensure that your Morse characters are all space-separated.</p>
+    <form class="morse__form" action="">
+        <textarea rows="8" cols="50" class="formtext"></textarea>
+    </form>
+    <section class="morse__buttons">
+        <button class="morsebutton">Translate to Morse</button>
+        <button class="englishbutton">De-code from Morse</button>
+    </section>
+
+    <section class="translationoutput"></section>
+</main>
+
+<script src="./code.js"></script>
+</body>
+</html>
