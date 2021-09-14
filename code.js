@@ -1,15 +1,15 @@
 //Translate the alphabet (case-insensitive) and the 10 1-digit numbers into morse code, and vice versa.
-const buttony = document.querySelector(".morsebutton");
-const buttonytwo = document.querySelector(".englishbutton");
-const outputy = document.querySelector(".translationoutput");
+const morseButton = document.querySelector(".morsebutton");
+const engButton = document.querySelector(".englishbutton");
+const tlOutput = document.querySelector(".translationoutput");
 
 const toMorse = () => {
     //Store textarea HTML's current value (string).
     var form = document.querySelector(".formtext").value;
     //Turn string into array.
-    var formarray = form.split("");
+    var formArray = form.split("");
     //Use if/else to translate into morse.
-    var morsearray = formarray.map( (c) => {
+    var morseArray = formArray.map( (c) => {
         if(c.toLowerCase() == "a"){
             return ".-";
         } 
@@ -122,17 +122,17 @@ const toMorse = () => {
             return c;
         }
     })
-    outputy.innerHTML = morsearray.join(" ");
+    tlOutput.innerHTML = morseArray.join(" ");
 }
 
 const toHuman = () => {
     //Store textarea HTML's current value (Morse string).
     var form = document.querySelector(".formtext").value;
     //Turn string into array (seperate by /).
-    var formarray = form.split(" ");
+    var formArray = form.split(" ");
     //Use if/else to translate into English.
     //Use if/else to translate into morse.
-    var engarray = formarray.map( (c) => {
+    var engArray = formArray.map( (c) => {
         if(c.toLowerCase() == ".-"){
             return "a";
         } 
@@ -245,13 +245,13 @@ const toHuman = () => {
             return c;
         }
     })    
-    outputy.innerHTML = engarray.join(""); 
+    tlOutput.innerHTML = engArray.join(""); 
 }
 
 
-buttony.addEventListener("click", () => {
+morseButton.addEventListener("click", () => {
     toMorse();
 })
-buttonytwo.addEventListener("click", () => {
+engButton.addEventListener("click", () => {
     toHuman();
 })

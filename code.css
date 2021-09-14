@@ -29,9 +29,17 @@ body {
   border: 1px solid #76729e;
   margin-right: 12px;
 }
+.morse .morse__buttons .morsebutton:hover {
+  background-color: #9393df;
+  border: 1px solid #302b63;
+}
 .morse .morse__buttons .englishbutton {
   background-color: #c1e7c1;
   border: 1px solid #587e4e;
+}
+.morse .morse__buttons .englishbutton:hover {
+  background-color: #60a360;
+  border: 1px solid #284720;
 }
 .morse .translationoutput {
   margin-top: 20px;

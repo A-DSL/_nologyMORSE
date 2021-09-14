@@ -1,17 +1,17 @@
 "use strict";
 
 //Translate the alphabet (case-insensitive) and the 10 1-digit numbers into morse code, and vice versa.
-var buttony = document.querySelector(".morsebutton");
-var buttonytwo = document.querySelector(".englishbutton");
-var outputy = document.querySelector(".translationoutput");
+var morseButton = document.querySelector(".morsebutton");
+var engButton = document.querySelector(".englishbutton");
+var tlOutput = document.querySelector(".translationoutput");
 
 var toMorse = function toMorse() {
   //Store textarea HTML's current value (string).
   var form = document.querySelector(".formtext").value; //Turn string into array.
 
-  var formarray = form.split(""); //Use if/else to translate into morse.
+  var formArray = form.split(""); //Use if/else to translate into morse.
 
-  var morsearray = formarray.map(function (c) {
+  var morseArray = formArray.map(function (c) {
     if (c.toLowerCase() == "a") {
       return ".-";
     } else if (c.toLowerCase() == "b") {
@@ -88,17 +88,17 @@ var toMorse = function toMorse() {
       return c;
     }
   });
-  outputy.innerHTML = morsearray.join(" ");
+  tlOutput.innerHTML = morseArray.join(" ");
 };
 
 var toHuman = function toHuman() {
   //Store textarea HTML's current value (Morse string).
   var form = document.querySelector(".formtext").value; //Turn string into array (seperate by /).
 
-  var formarray = form.split(" "); //Use if/else to translate into English.
+  var formArray = form.split(" "); //Use if/else to translate into English.
   //Use if/else to translate into morse.
 
-  var engarray = formarray.map(function (c) {
+  var engArray = formArray.map(function (c) {
     if (c.toLowerCase() == ".-") {
       return "a";
     } else if (c.toLowerCase() == "-...") {
@@ -175,12 +175,12 @@ var toHuman = function toHuman() {
       return c;
     }
   });
-  outputy.innerHTML = engarray.join("");
+  tlOutput.innerHTML = engArray.join("");
 };
 
-buttony.addEventListener("click", function () {
+morseButton.addEventListener("click", function () {
   toMorse();
 });
-buttonytwo.addEventListener("click", function () {
+engButton.addEventListener("click", function () {
   toHuman();
 });
